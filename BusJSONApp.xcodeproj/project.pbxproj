@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3141268A1C9AE72B00581493 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 314126891C9AE72B00581493 /* SwiftyJSON.framework */; };
+		3172D1E71C9AAE7800273CF7 /* Takatsuki.json in Resources */ = {isa = PBXBuildFile; fileRef = 3172D1E61C9AAE7800273CF7 /* Takatsuki.json */; };
+		3172D1E91C9AB6B000273CF7 /* Tonda.json in Resources */ = {isa = PBXBuildFile; fileRef = 3172D1E81C9AB6B000273CF7 /* Tonda.json */; };
 		31F0E58A1C96FBCF006BE4EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F0E5891C96FBCF006BE4EF /* AppDelegate.swift */; };
 		31F0E58C1C96FBCF006BE4EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F0E58B1C96FBCF006BE4EF /* ViewController.swift */; };
 		31F0E58F1C96FBCF006BE4EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31F0E58D1C96FBCF006BE4EF /* Main.storyboard */; };
@@ -14,6 +17,7 @@
 		31F0E5941C96FBD1006BE4EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31F0E5921C96FBD1006BE4EF /* LaunchScreen.storyboard */; };
 		31F0E59F1C96FBD1006BE4EF /* BusJSONAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F0E59E1C96FBD1006BE4EF /* BusJSONAppTests.swift */; };
 		31F0E5AA1C96FBD1006BE4EF /* BusJSONAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F0E5A91C96FBD1006BE4EF /* BusJSONAppUITests.swift */; };
+		DADD86DEFB21B03A91DDA05D /* Pods_BusJSONApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBC1A71157081602DFE65AE9 /* Pods_BusJSONApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		29A2324D93F6A8F09F422D9C /* Pods-BusJSONApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusJSONApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BusJSONApp/Pods-BusJSONApp.debug.xcconfig"; sourceTree = "<group>"; };
+		310B50491C96FCF8002B6206 /* BusJSONApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BusJSONApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		314126891C9AE72B00581493 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
+		3172D1E61C9AAE7800273CF7 /* Takatsuki.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Takatsuki.json; sourceTree = "<group>"; };
+		3172D1E81C9AB6B000273CF7 /* Tonda.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Tonda.json; sourceTree = "<group>"; };
 		31F0E5861C96FBCE006BE4EF /* BusJSONApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusJSONApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31F0E5891C96FBCF006BE4EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31F0E58B1C96FBCF006BE4EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +56,8 @@
 		31F0E5A51C96FBD1006BE4EF /* BusJSONAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BusJSONAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31F0E5A91C96FBD1006BE4EF /* BusJSONAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusJSONAppUITests.swift; sourceTree = "<group>"; };
 		31F0E5AB1C96FBD2006BE4EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71CA1113740FA26797228244 /* Pods-BusJSONApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusJSONApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-BusJSONApp/Pods-BusJSONApp.release.xcconfig"; sourceTree = "<group>"; };
+		DBC1A71157081602DFE65AE9 /* Pods_BusJSONApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BusJSONApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +65,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3141268A1C9AE72B00581493 /* SwiftyJSON.framework in Frameworks */,
+				DADD86DEFB21B03A91DDA05D /* Pods_BusJSONApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +94,8 @@
 				31F0E59D1C96FBD1006BE4EF /* BusJSONAppTests */,
 				31F0E5A81C96FBD1006BE4EF /* BusJSONAppUITests */,
 				31F0E5871C96FBCE006BE4EF /* Products */,
+				F867ED77AB42246A47736B22 /* Pods */,
+				5CCA3661F6C02741CD0A61AF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,7 +114,10 @@
 			children = (
 				31F0E5891C96FBCF006BE4EF /* AppDelegate.swift */,
 				31F0E58B1C96FBCF006BE4EF /* ViewController.swift */,
+				3172D1E61C9AAE7800273CF7 /* Takatsuki.json */,
+				3172D1E81C9AB6B000273CF7 /* Tonda.json */,
 				31F0E58D1C96FBCF006BE4EF /* Main.storyboard */,
+				310B50491C96FCF8002B6206 /* BusJSONApp-Bridging-Header.h */,
 				31F0E5901C96FBD1006BE4EF /* Assets.xcassets */,
 				31F0E5921C96FBD1006BE4EF /* LaunchScreen.storyboard */,
 				31F0E5951C96FBD1006BE4EF /* Info.plist */,
@@ -125,6 +143,24 @@
 			path = BusJSONAppUITests;
 			sourceTree = "<group>";
 		};
+		5CCA3661F6C02741CD0A61AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				314126891C9AE72B00581493 /* SwiftyJSON.framework */,
+				DBC1A71157081602DFE65AE9 /* Pods_BusJSONApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F867ED77AB42246A47736B22 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				29A2324D93F6A8F09F422D9C /* Pods-BusJSONApp.debug.xcconfig */,
+				71CA1113740FA26797228244 /* Pods-BusJSONApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +168,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 31F0E5AE1C96FBD2006BE4EF /* Build configuration list for PBXNativeTarget "BusJSONApp" */;
 			buildPhases = (
+				D76537057ABD41918CBFA0E9 /* Check Pods Manifest.lock */,
 				31F0E5821C96FBCE006BE4EF /* Sources */,
 				31F0E5831C96FBCE006BE4EF /* Frameworks */,
 				31F0E5841C96FBCE006BE4EF /* Resources */,
+				30D3502048E69FE72CAB1F3A /* Embed Pods Frameworks */,
+				3E2B76FE69BD1477F9A26D81 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -235,6 +274,8 @@
 				31F0E5941C96FBD1006BE4EF /* LaunchScreen.storyboard in Resources */,
 				31F0E5911C96FBD1006BE4EF /* Assets.xcassets in Resources */,
 				31F0E58F1C96FBCF006BE4EF /* Main.storyboard in Resources */,
+				3172D1E91C9AB6B000273CF7 /* Tonda.json in Resources */,
+				3172D1E71C9AAE7800273CF7 /* Takatsuki.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +294,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		30D3502048E69FE72CAB1F3A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BusJSONApp/Pods-BusJSONApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E2B76FE69BD1477F9A26D81 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BusJSONApp/Pods-BusJSONApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D76537057ABD41918CBFA0E9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		31F0E5821C96FBCE006BE4EF /* Sources */ = {
@@ -351,7 +440,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -389,7 +478,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -398,28 +487,43 @@
 		};
 		31F0E5AF1C96FBD2006BE4EF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29A2324D93F6A8F09F422D9C /* Pods-BusJSONApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = BusJSONApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.takuapps.BusJSONApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BusJSONApp/BusJSONApp-Bridging-Header.h";
 			};
 			name = Debug;
 		};
 		31F0E5B01C96FBD2006BE4EF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71CA1113740FA26797228244 /* Pods-BusJSONApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = BusJSONApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.takuapps.BusJSONApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BusJSONApp/BusJSONApp-Bridging-Header.h";
 			};
 			name = Release;
 		};
 		31F0E5B21C96FBD2006BE4EF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29A2324D93F6A8F09F422D9C /* Pods-BusJSONApp.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = BusJSONAppTests/Info.plist;
@@ -432,6 +536,7 @@
 		};
 		31F0E5B31C96FBD2006BE4EF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29A2324D93F6A8F09F422D9C /* Pods-BusJSONApp.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = BusJSONAppTests/Info.plist;
@@ -485,6 +590,7 @@
 				31F0E5B01C96FBD2006BE4EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		31F0E5B11C96FBD2006BE4EF /* Build configuration list for PBXNativeTarget "BusJSONAppTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +599,7 @@
 				31F0E5B31C96FBD2006BE4EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		31F0E5B41C96FBD2006BE4EF /* Build configuration list for PBXNativeTarget "BusJSONAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +608,7 @@
 				31F0E5B61C96FBD2006BE4EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
