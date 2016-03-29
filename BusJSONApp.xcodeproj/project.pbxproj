@@ -500,6 +500,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.takuapps.BusJSONApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BusJSONApp/BusJSONApp-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -518,6 +519,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.takuapps.BusJSONApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BusJSONApp/BusJSONApp-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

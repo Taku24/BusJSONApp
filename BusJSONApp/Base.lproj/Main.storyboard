@@ -26,7 +26,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="学期日のみ運行するバスを除外" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4P8-qO-ptw">
-                                <rect key="frame" x="20" y="418" width="204" height="68"/>
+                                <rect key="frame" x="20" y="405" width="204" height="68"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -38,7 +38,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkK-hB-T39" customClass="FUIButton">
-                                <rect key="frame" x="20" y="533" width="106" height="66"/>
+                                <rect key="frame" x="20" y="528" width="101" height="66"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="使い方"/>
                                 <connections>
@@ -46,19 +46,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCT-mS-TRZ" customClass="FUIButton">
-                                <rect key="frame" x="195" y="533" width="160" height="68"/>
+                                <rect key="frame" x="195" y="527" width="160" height="68"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="このアプリについて"/>
                                 <connections>
                                     <action selector="AbouAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YbU-b3-3bu"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oXT-Sy-AfN" customClass="FUIButton">
-                                <rect key="frame" x="20" y="306" width="332" height="56"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="最短でバスに乗る"/>
-                                <connections>
-                                    <action selector="Timeshcedule:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KTV-nz-7WZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dcj-zy-muy" customClass="FUIButton">
@@ -70,7 +62,7 @@
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cOS-gf-5Pf" customClass="FUISegmentedControl">
-                                <rect key="frame" x="224" y="432" width="131" height="29"/>
+                                <rect key="frame" x="224" y="417" width="131" height="29"/>
                                 <segments>
                                     <segment title="OFF"/>
                                     <segment title="ON"/>
@@ -79,12 +71,20 @@
                                     <action selector="Controll:" destination="BYZ-38-t0r" eventType="valueChanged" id="ICy-1a-lnu"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(高槻キャンパスからのバスです)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDo-1p-W0g">
-                                <rect key="frame" x="20" y="54" width="335" height="87"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(高槻キャンパスから各駅のバスです)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDo-1p-W0g">
+                                <rect key="frame" x="22" y="52" width="335" height="87"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oXT-Sy-AfN" customClass="FUIButton">
+                                <rect key="frame" x="20" y="295" width="335" height="56"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="最短でバスに乗る"/>
+                                <connections>
+                                    <action selector="Timeshcedule:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KTV-nz-7WZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -94,6 +94,7 @@
                         <outlet property="About" destination="dCT-mS-TRZ" id="Nef-Zm-dN5"/>
                         <outlet property="ControllLabal" destination="cOS-gf-5Pf" id="Yp9-UF-pmq"/>
                         <outlet property="HowUseBtn" destination="hkK-hB-T39" id="THx-gT-6is"/>
+                        <outlet property="Label" destination="qDo-1p-W0g" id="4uC-7c-sFK"/>
                         <outlet property="TakatsukiBtn" destination="sAv-OS-kd4" id="BLq-OD-j6N"/>
                         <outlet property="Time" destination="oXT-Sy-AfN" id="brj-o9-jJN"/>
                         <outlet property="TondaBtn" destination="Dcj-zy-muy" id="KCP-kh-VDU"/>
@@ -101,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="397.5" y="124.5"/>
+            <point key="canvasLocation" x="-77.5" y="-49.5"/>
         </scene>
     </scenes>
 </document>

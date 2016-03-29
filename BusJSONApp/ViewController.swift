@@ -19,7 +19,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-
         
         //高槻Btn
         self.TakatsukiBtn.buttonColor = UIColor.turquoiseColor()
@@ -39,7 +38,7 @@ class ViewController: UIViewController {
         self.TondaBtn.setTitleColor(UIColor.cloudsColor(), forState: .Normal)
         self.TondaBtn.setTitleColor(UIColor.cloudsColor(), forState: .Highlighted)
         
-        //各駅の時刻表
+        //最短
         self.Time.buttonColor = UIColor.alizarinColor()
         self.Time.shadowColor = UIColor.pomegranateColor()
         self.Time.shadowHeight = 3.0
@@ -87,7 +86,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var ControllLabal: FUISegmentedControl! //スイッチ
     @IBOutlet weak var HowUseBtn: FUIButton! //使い方
     @IBOutlet weak var About: FUIButton! //このアプリについて
-    @IBOutlet weak var Time: FUIButton!
+    @IBOutlet weak var Time: FUIButton! //最短
+    @IBOutlet weak var Label: UILabel! //表示
+    
     
     var month:Int = 0 //月
     var day:Int = 0 //日
@@ -101,6 +102,8 @@ class ViewController: UIViewController {
     var num:Int = 0 //スイッチ
     var i:Int = 0 //カウンタ
     var cnt:Int = 0 //カウンタ
+    var stop:Int = 0 //カウンタ
+    var changeID:Int = 0 //行き先変更
     var plus:Int = 0 //調整
     var special:Int = 0 //祝日
     var id1:Int = 0 //高槻
@@ -113,14 +116,13 @@ class ViewController: UIViewController {
             message2 = "現在バスは運行していません"
         } else if (week == 7 && ((0 <= hour && hour <= 6) || (21 <= hour && 31 <= min))){ //土曜日の運行時間外
             message2 = "現在バスは運行していません"
-        } else if (week == 1 && ((0 <= hour && hour <= 6) || (17 <= hour && 11 <= min))){//日曜日の運行時間外
+        } else if ((week == 1 || special == 1) && ((0 <= hour && hour <= 6) || (17 <= hour && 11 <= min))){//日曜日の運行時間外
             message2 = "現在バスは運行していません"
         } else {
             tmp = "Takatsuki"
             judge()
         }
         alert()
-        
     }
     
     @IBAction func TondaAction(sender: FUIButton) { //富田
@@ -130,7 +132,7 @@ class ViewController: UIViewController {
             message2 = "現在バスは運行していません"
         } else if (week == 7 && ((0 <= hour && hour <= 6) || (hour == 22 && 9 <= min))){
             message2 = "現在バスは運行していません"
-        } else if (week == 1 && ((0 <= hour && hour <= 6) || (hour == 22 && 3 <= min))){
+        } else if ((week == 1 || special == 1) && ((0 <= hour && hour <= 6) || (hour == 22 && 3 <= min))){
             message2 = "現在バスは運行していません"
         } else {
             tmp = "Tonda"
@@ -153,18 +155,18 @@ class ViewController: UIViewController {
             id1 = -1
         } else if (week == 7 && ((0 <= hour && hour <= 6) || (21 <= hour && 31 <= min))){ //高槻土曜日の運行時間外
             id1 = -1
-        } else if (week == 1 && ((0 <= hour && hour <= 6) || (17 <= hour && 11 <= min))){//高槻日曜日の運行時間外
+        } else if ((week == 1 || special == 1) && ((0 <= hour && hour <= 6) || (17 <= hour && 11 <= min))){//高槻日曜日の運行時間外
             id1 = -1
         } else {
             tmp = "Takatsuki"
             judge2()
-            cnt++
+            cnt += 1
         }
         if ((2 <= week && week <= 6) && ((0 <= hour && hour <= 5) || (22 <= hour && 32 <= min))){
             id2 = -1
         } else if (week == 7 && ((0 <= hour && hour <= 6) || (hour == 22 && 9 <= min))){
             id2 = -1
-        } else if (week == 1 && ((0 <= hour && hour <= 6) || (hour == 22 && 3 <= min))){
+        } else if ((week == 1 || special == 1) && ((0 <= hour && hour <= 6) || (hour == 22 && 3 <= min))){
             id2 = -1
         } else {
             tmp = "Tonda"
@@ -174,6 +176,7 @@ class ViewController: UIViewController {
         judge3()
         
     }
+    
 
     @IBAction func HowuseAction(sender: FUIButton) { //使い方
         message1 = "使い方"
@@ -235,7 +238,7 @@ class ViewController: UIViewController {
                 i = 0
                 continue
             }
-            i++
+            i += 1
         }
     }
     
@@ -255,19 +258,20 @@ class ViewController: UIViewController {
             weekday = 2
         }
         while(true){
-            let id = json["Nomal"][weekday]["\(hour)"][i].int
+            var id = json["Nomal"][weekday]["\(hour)"][i].int
             if (min == id){
                 if(cnt == 0){
                     id1 = 0
-                } else {
+                    cnt += 1
+                } else if (cnt == 1){
                     id2 = 0
                 }
                 break
             } else if (min < id! + plus){
                 if(cnt == 0){
-                    id1 = Int(id!) - min
-                } else {
-                    id2 = Int(id!) - min
+                    id1 = (Int(id!) + plus) - min
+                } else if (cnt == 1){
+                    id2 = (Int(id!) + plus) - min
                 }
                 i = 0
                 special = 0
@@ -278,32 +282,39 @@ class ViewController: UIViewController {
                 i = 0
                 continue
             }
-            i++
+            i += 1
         }
     }
     
     func judge3(){
-        if(id1 == -1 && id2 == -1 ){
-            message2 = "現在両駅ともにバスは運行していません"
-            plus = 0
-        } else if (id1 == -1 && id2 + plus != -1){
-            message1 = "富田"
-            message2 = "最短のバスは富田で\(id2 + plus)分後です"
-            plus = 0
-        } else if (id2 == -1 && id1 + plus != -1){
-            message1 = "高槻"
-            message2 = "最短のバスは高槻で\(id1 + plus)分後です"
-            plus = 0
-        } else if (id1 + plus > id2 + plus){
-            message1 = "富田"
-            message2 = "最短のバスは富田で\(id2 + plus)分後です"
-            plus = 0
-        } else if (id1 + plus < id2 + plus){
-            message1 = "高槻"
-            message2 = "最短のバスは高槻で\(id1 + plus)分後です"
-            plus = 0
+        if(id1 == -1 && id2 == -1){ //両方運行時間外
+            message1 = ""
+            message2 = "現在両駅ともに運行していません"
+            stop = 1
+        } else if (id1 != -1 && id2 == -1){ //富田運行時間外
+            message1 = "富田は運行時間外です"
+            message2 = "高槻で次のバスは\(id1)分後です"
+            if(id1 == 0){
+                message2 = "高槻は出発時間です"
+            }
+            stop = 1
+        } else if (id1 == -1 && id2 != -1){
+            message1 = "高槻は運行時間外です"
+            message2 = "富田で次のバスは\(id2)分後です"
+            if(id2 == 0){
+                message2 = "富田は出発時間です"
+            }
+            stop = 1
+        } else if(stop == 0 && id1 > id2){
+            message1 = "最短"
+            message2 = "最短は富田で\(id2)分後です"
+        } else if(stop == 0 && id1 < id2){
+            message1 = "最短"
+            message2 = "最短は高槻で\(id1)分後です"
         }
         alert()
+        stop = 0
+        plus = 0
     }
     
     func alert(){ //アラート
